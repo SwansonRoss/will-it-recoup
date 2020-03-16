@@ -5,7 +5,7 @@ import pickle
 
 model_ab = pickle.load(open('models/ab_model.pkl', 'rb'))
 model_gb = pickle.load(open('models/gb_model.pkl', 'rb'))
-model_bagging = pickle.load(open('models/bagging_model.pkl', 'rb'))
+#model_bagging = pickle.load(open('models/bagging_model.pkl', 'rb'))
 
 def queryBuilder(q):
     queryFinal = np.zeros(shape=(1, 11099))
@@ -45,7 +45,8 @@ def queryBuilder(q):
 
 def voteRecoup(q):
     votes = 0
-    preds = [model_ab.predict(q)[0], model_gb.predict(q)[0], model_bagging.predict(q)[0]]
+    #preds = [model_ab.predict(q)[0], model_gb.predict(q)[0], model_bagging.predict(q)[0]]
+    preds = [model_ab.predict(q)[0], model_gb.predict(q)[0]]
     for p in preds:
         if(p):
             votes += 1

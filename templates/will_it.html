@@ -7,7 +7,7 @@
         <div style="text-align: center;">
             <p>Our prediction is:</p>
         </div>
-        <div class="response">
+        <!-- <div class="response">
         {% if total == 3 %}
             Yes
         {% elif total == 2 %}
@@ -19,16 +19,27 @@
         {% else %}
             Uh oh, something went wrong
         {% endif %}
-        </div>
+        </div> -->
+        <div class="response">
+            {% if total == 2 %}
+                Yes
+            {% elif total == 1 %}
+                Maybe
+            {% elif total == 0 %}
+                No
+            {% else %}
+                Uh oh, something went wrong
+            {% endif %}
+            </div>
         <div class="vote-grid row">
             <div style="text-align: right;">AdaBoost Classifier:</div>{% if votes[0] %}<div class="pass">Yes</div>{% else %}<div class="fail">No</div>{% endif %}
         </div>
         <div class="vote-grid row2">
             <div style="text-align: right;">Gradient Boosting Classifier:</div>{% if votes[1] %}<div class="pass">Yes</div>{% else %}<div class="fail">No</div>{% endif %}
         </div>
-        <div class="vote-grid row">
+        <!-- <div class="vote-grid row">
             <div style="text-align: right;">Bagging Classifier:</div>{% if votes[0] %}<div class="pass">Yes</div>{% else %}<div class="fail">No</div>{% endif %}
-        </div>
+        </div> -->
     </section>
     <footer class="footer">
         <div class="footer-container"><a class="footer-link" href="/">Try a different query</a></div>
