@@ -36,5 +36,6 @@ Below is a quick tour of the files and directories in this repo:
 > $ export FLASK_APP=app.py  
 > $ export FLASK_ENV=development  
 > $ flask run  
+Then point browser to localhost:5000
 
 
