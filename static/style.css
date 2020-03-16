@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+p{
+    font-size: 18px;
+}
+
+.header{
+    background-color: green;
+}
+
+ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.title{
+    font-family: 'Anton', sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 52px;
+    padding: .5rem;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section{
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.act-grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: .25rem;
+    padding-bottom: 1rem;
+}
+
+.check-box{
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-gap: 0.25em;
+}
+
+.dd{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid green;
+    border-radius: 0;
+    width: 100%;
+    background-color: transparent;
+    content: none;
+    padding: 0 5px 15px 5px;
+    height: auto;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 300;
+}
+
+.dd select{
+    border-radius: 0;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.button-container{
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 50px 0
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    font-size: 22px;
+    background-color: lightgreen;
+
+}
+
+.button:disabled{
+    background-color: lightgrey;
+}
+
+.response{
+    font-family: 'Anton', sans-serif;
+    color: #000;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 52px;
+    text-align: center;
+    padding: 0px 0 30px 0;
+}
+
+.vote-grid{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin: 0 auto;
+    border-top: 1px solid #555;
+}
+
+.row{
+    background-color: #eee;
+    padding: 25px;
+}
+
+.row2{
+    background-color: #ddd;
+    padding: 25px;
+}
+
+.pass{
+    color: green;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.fail{
+    color: red;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.footer-container{
+    padding: 50px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-link{
+    color: #000000;
+    font-size: 18px;
+}

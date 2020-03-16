@@ -1,0 +1,107 @@
+<form method=post action="/will-it">
+    <div>
+        <div>
+            {{ form.director(class_="dd director-input")}}
+        </div>
+        <div>
+            {{ form.director.label}}
+        </div>
+    </div>
+    <div>    
+        <div>
+            {{ form.producer(class_="dd")}}
+        </div>
+        <div>
+            {{ form.producer.label}}
+        </div>
+    </div>
+    <div class="act-grid">
+        <div>
+            <div>
+                {{ form.act1(class_="dd")}}
+            </div>
+            <div>
+                {{ form.act1.label}}
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act1g(class_="dd")}}
+            </div>
+            <div>
+               {{ form.act1g.label}} 
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act2(class_="dd")}}
+            </div>
+            <div>
+                {{ form.act2.label}}
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act2g(class_="dd")}}
+            </div>
+            <div>
+               {{ form.act2g.label}} 
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act3(class_="dd")}}
+            </div>
+            <div>
+                {{ form.act3.label}}
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act3g(class_="dd")}}
+            </div>
+            <div>
+               {{ form.act3g.label}} 
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act4(class_="dd")}}
+            </div>
+            <div>
+                {{ form.act4.label}}
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.act4g(class_="dd")}}
+            </div>
+            <div>
+               {{ form.act4g.label}} 
+            </div>
+        </div>
+    </div>
+    <div>
+        {{ form.genres.label}}
+        {{ form.genres()}}
+    </div>
+        <div>
+            <div>
+                {{ form.budget(class_="dd")}}
+            </div>
+            <div>
+               {{ form.budget.label}} 
+            </div>
+        </div>
+        <div>
+            <div>
+                {{ form.prodCo(class_="dd")}}
+            </div>
+            <div>
+               {{ form.prodCo.label}} 
+            </div>
+        </div>
+    <div class="button-container">
+        <input class="button" id="submit-button" type=submit value='See results' name='submit_button'>
+    </div>
+</form>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    {% include "template-parts/head.html" %}
+    <body>
+        {% include "template-parts/header.html" %}
+        <section
+         class="form-section">
+            <div>
+                <p class="intro-text">
+                    It costs millions of dollars to make a Hollywood blockbuster, but there's no guarantee the studio will make that money back.
+                </p>
+                <p class="intro-text">
+                    Using the <a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata#tmdb_5000_movies.csv" target="_blank">TMDB 5000 Movie Dataset</a> from Kaggle, I built a model to predict whether or not a movie will recoup its budget.
+                </p>
+            </div>
+        {% from "_formhelpers.html" import render_field %}
+        {% include "forms/form.html" %}
+        </section>
+    </body>
+</html>
+
+<script>
+    const submitButton = document.getElementById('submit-button')
+    const dropDowns = document.getElementsByClassName('dd')
+    const genres = document.getElementById('genres')
+
+    for (let x of dropDowns){
+        x.addEventListener("change", validateDD)
+    }
+
+    for (let x of genres.getElementsByTagName('li')){
+        x.childNodes[0].addEventListener("change", validateDD)
+    }
+
+    submitButton.disabled = true;
+
+    function validateDD(){
+        console.log("event triggered")
+        submitButton.disabled = false;
+        for (let x of dropDowns){
+            if (x.value == "disabled"){
+                submitButton.disabled = true;
+            }
+        }
+        count = 0
+        for (let x of genres.getElementsByTagName('li')){
+            if(x.childNodes[0].checked){
+                count += 1;
+            }
+        }
+        if(count < 1){
+            submitButton.disabled = true;
+        }
+    }
+    
+    </script>
